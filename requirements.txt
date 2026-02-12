@@ -11,3 +11,4 @@ torch
 pypdf
 beautifulsoup4
 bs4
+sentence_transformers
