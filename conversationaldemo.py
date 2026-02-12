@@ -1,3 +1,4 @@
+import os
 from json import load
 from langchain_chroma import Chroma
 from langchain_groq import ChatGroq
