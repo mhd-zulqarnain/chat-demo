@@ -1,6 +1,4 @@
 from json import load
-import os
-from dotenv import load_dotenv
 from langchain_chroma import Chroma
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -15,11 +13,9 @@ from langchain_classic.chains import create_retrieval_chain, create_history_awar
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 
 
-load_dotenv()
-
 
 def get_llm():
-    grop_api_key = os.getenv("GROQ_API_KEY","")
+    groq_api_key = st.secrets["GROQ_API_KEY"]
     return ChatGroq(model="llama-3.3-70b-versatile", api_key=SecretStr(grop_api_key))
 
 
