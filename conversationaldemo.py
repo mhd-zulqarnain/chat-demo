@@ -24,7 +24,7 @@ def get_llm():
 
 
 def get_embedding():
-    os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN","")
+    os.environ["HF_TOKEN"] = st.secrets["HF_TOKEN"]
     return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 st.set_page_config(page_title="Demo",layout="wide")
